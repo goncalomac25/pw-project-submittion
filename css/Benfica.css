@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Garamond;
+  box-sizing: border-box;
+}
+
+#navbar {
+  height: 50px;
+  width: 100%;
+  background: #fdfefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-btn-container {
+  position: relative;
+  margin-left: 50px;
+}
+
+#logo-btn {
+  letter-spacing: 0.02em;
+  display: inline-block;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  font-family: 'Felix Titling', sans-serif;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#logo-btn:hover {
+  opacity: 1;
+}
+
+#logo-btn-container:hover #logo-btn {
+  transform: scale(1.1);
+}
+
+#logo-btn-container:hover #logo-btn:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+.titulo {
+  font-family: 'Courier New', monospace;
+}
+
+
+.sections {
+  display: flex;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+}
+
+.section {
+  flex: 1;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  font-family: 'Felix Titling', sans-serif;
+}
+
+#section1 {
+  background-image: url("estadio.jpg");
+}
+
+#section2 {
+  background-image: url("titulos.jpg");
+}
+
+#section3 {
+  background-image: url("eusebio.jpg");
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 50px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+}
+
+.info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+.section:hover .info {
+  display: flex;
+}
+
+.section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
